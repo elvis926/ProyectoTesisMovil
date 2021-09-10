@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { WorkPage } from './work.page';
+import { SliderPage } from './slider.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: WorkPage
-  },
+    component: SliderPage
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class WorkPageRoutingModule {}
+export class SliderPageRoutingModule {}
