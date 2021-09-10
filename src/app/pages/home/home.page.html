@@ -1,31 +1,127 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>TecniFast</ion-title>
+    
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+<ion-menu side="start" menuId="first" contentId="main">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Start Menu</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item [routerLink]="'/request'">Solicitar Servicio</ion-item>
+      <ion-item [routerLink]="'/solutions'">Daños Comunes</ion-item>
+      <ion-item [routerLink]="'/work'">Trabaja Con Nosotros</ion-item>
+      <ion-item [routerLink]="'/comments'">Mis Comentarios</ion-item>
+      <ion-item [routerLink]="'/contact'">Contactanos</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="main"></ion-router-outlet>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  <ion-fab horizontal="end" vertical="top" slot="fixed" edge>
+    <ion-fab-button >
+      <ion-icon name="add" ></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-facebook" class="facebook"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="call" class="call"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-whatsapp" class="whatsapp" ></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <div><img src="./assets/icon/carusel1.jpeg" /></div>
+  <ion-grid>
+    <ion-title>Servicios</ion-title>
+    <ion-row>
+    <ion-col><img src="./assets/icon/mantenimiento4.jpg" /></ion-col>
+    <ion-col><img src="./assets/icon/mantenimiento3.jpg" /></ion-col>
+    <ion-col><img src="./assets/icon/mantenimiento1.jpg" /></ion-col>
+    
+  </ion-row>
+    <ion-text>Somos un equipo innovador, donde ofrecemos el servicio de mantenimiento
+      de equipos computacionales.</ion-text>
+    <ion-text>Si deseas saber cuales son los daños posibles de tu equipo, te podemos 
+      ayudar a resolver tus dudas.
+    </ion-text>
+    <ion-button color=var(ion-color-mycolor)>Posibles daños</ion-button>
+  </ion-grid>
+  <ion-grid>
+    <ion-title>Errores más comunes</ion-title>
+    <ion-list>
+      <ion-item><ion-icon name="chevron-forward-outline"></ion-icon>El PC va lento
+      </ion-item>
+      <ion-item><ion-icon name="chevron-forward-outline"></ion-icon>Errores del sistema operativo
+      </ion-item>
+      <ion-item><ion-icon name="chevron-forward-outline"></ion-icon>El ordenador no enciende o se apaga
+      </ion-item>
+      <ion-item><ion-icon name="chevron-forward-outline"></ion-icon>Problemas con la RAM
+      </ion-item>
+      <ion-item><ion-icon name="chevron-forward-outline"></ion-icon>Problemas con la tarjeta gráfica
+      </ion-item>
+      <ion-item><ion-icon name="chevron-forward-outline"></ion-icon>Problemas en el ventilador de tu PC
+      </ion-item>
+      
+    </ion-list>
+    <ion-button href="/solutions" color=var(ion-color-mycolor)>Posibles daños </ion-button>
+  </ion-grid>
+
+  <ion-card>
+      <ion-card-header>
+        <img src="./assets/icon/contactanos.png" />
+        
+      </ion-card-header>
+      <ion-card-content>
+        <ion-text>Desea contáctarse con nosotros, puedes enviar un correo y estaremos 
+          nos comunicaremos contigo en poco tiempo.
+        </ion-text>
+        <ion-button href="/contact" color=var(ion-color-mycolor)>Contáctanos </ion-button>
+      </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <img src="./assets/icon/trabaja.jpg" />
+      
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text>Desea contáctarse con nosotros, puedes enviar un correo y estaremos 
+        nos comunicaremos contigo en poco tiempo.
+      </ion-text>
+      <ion-button href="/work" color=var(ion-color-mycolor)>Trabaja con nosotros </ion-button>
+    </ion-card-content>
+</ion-card>
+
 </ion-content>
 
-<!-- Footer without a border -->
 <ion-footer>
   <ion-toolbar>
-    <div class="bar bar-footer bar-balanced">
-      <a class="button icon ion-navicon"></a>
-      <a class="button icon ion-home"></a>
-      <a class="button icon ion-star"></a>
-  </div>
-  </ion-toolbar>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button [routerLink]="'/home'">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Inicio</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button [routerLink]="'/profile-client'">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button [routerLink]="'/comments'">
+        <ion-icon name="list"></ion-icon>
+        <ion-label>Comentarios</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-toolbar>
 </ion-footer>

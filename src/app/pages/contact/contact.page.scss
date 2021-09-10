@@ -1,0 +1,61 @@
+.whatsapp{
+    width: 30px;
+    height: 30px;
+    color:#00bb2d;
+}
+.call{
+    width: 30px;
+    height: 30px;
+    color:var(--ion-color-mycolora);
+}
+.facebook{
+    width: 30px;
+    height: 30px;
+    color:#3b5998;
+    
+}
+ion-button{
+    display:block !important;
+    margin: auto !important;
+    background-color: var(--ion-color-mycolor);
+    border-radius: 20px;
+    width: 80%;
+
+
+}
+ion-content{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--ion-color-mycolor);
+}
+img{
+    display:block !important;
+    margin:auto !important;
+    width: 60%; ;
+    border-radius: 100px;
+    border-color: var(--ion-color-mycolor);
+    border: 5px solid var(--ion-color-mycolor);
+}
+ion-card-title{
+    text-align: center;
+    //color: rgba(60, 180, 172, 0.58);
+    color:var(--ion-color-mycolor);
+}
+ion-card-subtitle{
+    color:var(--ion-color-mycolor);
+    text-align: center;
+}
+
+
+ion-card-header{
+    //border: 5px solid var(--ion-color-mycolora);
+    background-color: var(--ion-color-mycolora);
+}
+ion-card-content{
+    color: #383E56;
+    background-color: var(--ion-color-mycolora);
+    font-size: 20px;
+}
+ion-list{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}

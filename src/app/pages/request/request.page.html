@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-title>Requerimientos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Problemas posibles del equipo</ion-list-header>
+    <ion-item>
+      <ion-label>Posibles fallos</ion-label>
+      <ion-select value="Otros" okText="Aceptar" cancelText="Salir">
+        <ion-select-option value="Pantalla azul">Pantalla azul</ion-select-option>
+        <ion-select-option value="Sistema operativo">Sistema operativo</ion-select-option>
+        <ion-select-option value="La unidad de disco">Unidad de CD</ion-select-option>
+        <ion-select-option value="Mantenimiento correctivo">Mantenimiento correctivo</ion-select-option>
+        <ion-select-option value="Antivirus">Antivirus</ion-select-option>
+        <ion-select-option value="Hardware">Hardware</ion-select-option>
+        <ion-select-option value="Software">Software</ion-select-option>
+        <ion-select-option value="Limpieza">Limpieza</ion-select-option>
+        <ion-select-option value="Otros">Otros</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Descripción del equipo</ion-label>
+        <ion-textarea Type="text" placeholder="Mi equipo es de marca ..."></ion-textarea>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Descripción del problema</ion-label>
+        <ion-textarea Type="text" placeholder="Los problemas de mi equipo son ..."></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <ion-button>Enviar
+    
+  </ion-button>
+</ion-content>
