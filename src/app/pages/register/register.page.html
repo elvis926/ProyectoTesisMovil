@@ -1,20 +1,23 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
+    <div>
     <ion-buttons slot="start">
-      <ion-button color="var(--ion-color-mycolor)" href="/home">
+      <ion-button color="var(--ion-color-mycolor)" href="/login">
         <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-buttons slot="end">
-      <ion-button href="/login" color="var(--ion-color-mycolor)">Ingresar</ion-button>
-    </ion-buttons>
+    </div>
+    <div id="header">
+      <img src="assets/icon/LOG2.png" />
+    </div>
+    <h1 color="var(--ion-color-mycolor)">Únete A TecniFast</h1>
   </ion-toolbar>
 </ion-header>
 <ion-content>
   <div class="sign-container gradient-1">
     <div class="header">
       <div class="title ion-text-center">
-          <ion-label>Unete A TecniFast</ion-label>
+          
       </div>
     </div>
 
@@ -103,7 +106,7 @@
 
         <div class="ion-text-center fade-in">
           <ion-button
-            color="secondary"
+            color="var(--ion-color-mycolor)"
             class="submit-btn"
             type="submit"
             [disabled]="!validations_form.valid"
@@ -121,4 +124,11 @@
       </div>
     </div>
   </div>
+    <div class="ion-text-center">
+        <ion-button id="eye"color="none" href="/slider">
+          <ion-icon  name="eye-outline" color=(--ion-color-mycolora)></ion-icon>
+          <ion-label>Tomar un tour</ion-label>
+        </ion-button>
+    </div>
+  
 </ion-content>

@@ -98,6 +98,7 @@ export class RegisterPage implements OnInit {
   goToLoginPage() {
     this.navCtrl.navigateForward('/login');
   }
+  
 
 
 }

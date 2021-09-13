@@ -1,24 +1,21 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
+    <div>
     <ion-buttons slot="start">
-      <ion-button href="/home">
-        <ion-icon slot="icon-only" name="arrow-back" color="var(--ion-color-mycolor)"></ion-icon>
+      <ion-button color="var(--ion-color-mycolor)" href="/home">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
+    </div>
+    <div id="header">
+      <img src="assets/icon/LOG2.png" />
+    </div>
+    <h1 color="var(--ion-color-mycolor)">Bienvenido a TecniFast</h1>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <div id="header">
-    <img src="assets/icon/LOG2.png" />
-    <h1>Bienvenido a TecniFast</h1>
-  </div>
   <div class="sign-container gradient-1">
-    <div class="header">
-      <div class="title ion-text-center">
-          
-      </div>
-    </div>
-
+    
     <div class="login-container">
       <form
         class="form"
@@ -87,4 +84,10 @@
       </div>
     </div>
   </div>
+  <div class="ion-text-center">
+    <ion-button id="eye"color="none" href="/slider">
+      <ion-icon  name="eye-outline" color=(--ion-color-mycolora)></ion-icon>
+      <ion-label>Tomar un tour</ion-label>
+    </ion-button>
+</div>
 </ion-content>
