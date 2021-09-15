@@ -5,32 +5,111 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <form 
+    class="form"
+    [formGroup]="validations_form"
+    (ngSubmit)="postSolicitud()"
+  >
     <ion-list-header>Problemas posibles del equipo</ion-list-header>
-    <ion-item>
-      <ion-label>Posibles fallos</ion-label>
-      <ion-select value="Otros" okText="Aceptar" cancelText="Salir">
-        <ion-select-option value="Pantalla azul">Pantalla azul</ion-select-option>
-        <ion-select-option value="Sistema operativo">Sistema operativo</ion-select-option>
-        <ion-select-option value="La unidad de disco">Unidad de CD</ion-select-option>
-        <ion-select-option value="Mantenimiento correctivo">Mantenimiento correctivo</ion-select-option>
-        <ion-select-option value="Antivirus">Antivirus</ion-select-option>
-        <ion-select-option value="Hardware">Hardware</ion-select-option>
-        <ion-select-option value="Software">Software</ion-select-option>
-        <ion-select-option value="Limpieza">Limpieza</ion-select-option>
-        <ion-select-option value="Otros">Otros</ion-select-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Descripción del equipo</ion-label>
-        <ion-textarea Type="text" placeholder="Mi equipo es de marca ..."></ion-textarea>
-    </ion-item>
-    <ion-item>
-        <ion-label position="stacked">Descripción del problema</ion-label>
-        <ion-textarea Type="text" placeholder="Los problemas de mi equipo son ..."></ion-textarea>
-    </ion-item>
-  </ion-list>
-  <ion-button>Enviar
+      <ion-item>
+        <ion-label>Posibles fallos</ion-label>
+        <ion-select 
+          value="Otros" 
+          okText="Aceptar" 
+          cancelText="Salir"
+          formControlName="dano">
+            <ion-select-option value="Pantalla Azul">Pantalla azul</ion-select-option>
+            <ion-select-option value="Lentiutud">Sistema operativo</ion-select-option>
+            <ion-select-option value="No enciende">Unidad de CD</ion-select-option>
+            <ion-select-option value="No enciende">Mantenimiento correctivo</ion-select-option>
+            <ion-select-option value="Lentiutud">Antivirus</ion-select-option>
+            <ion-select-option value="Lentiutud">Hardware</ion-select-option>
+            <ion-select-option value="Lentiutud">Software</ion-select-option>
+            <ion-select-option value="Pitidos">Limpieza</ion-select-option>
+            <ion-select-option value="No enciende">Otros</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <div class="validation-errors ion-text-center">
+        <ng-container *ngFor="let validation of validation_messages.name">
+          <div
+            class="error-message"
+            *ngIf="validations_form.get('name').hasError(validation.type) && (validations_form.get('name').dirty || validations_form.get('name').touched)"
+          >
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item>
+        <ion-label position="floating" color="primary">Descripcion del Equipo</ion-label>
+          <ion-textarea 
+            class="ion-text-left"  
+            type="text" 
+            formControlName="descripcionPC">
+          </ion-textarea>
+      </ion-item>
+      <div class="validation-errors ion-text-center">
+        <ng-container *ngFor="let validation of validation_messages.descripcionPC">
+          <div
+            class="error-message"
+            *ngIf="validations_form.get('descripcionPC').hasError(validation.type) && (validations_form.get('descripcionPC').dirty || validations_form.get('descripcionPC').touched)"
+          >
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item>
+        <ion-label position="floating">Descripción del problema</ion-label>
+        <ion-textarea
+          class="ion-text-left" 
+          type="text" 
+          formControlName="descripcion"></ion-textarea>
+      </ion-item>
+      <div class="validation-errors ion-text-center">
+        <ng-container *ngFor="let validation of validation_messages.descripcion">
+          <div
+            class="error-message"
+            *ngIf="validations_form.get('descripcion').hasError(validation.type) && (validations_form.get('descripcion').dirty || validations_form.get('descripcion').touched)"
+          >
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <div class="ion-text-center fade-in">
+        <ion-button
+          color="secondary"
+          class="submit-btn"
+          type="submit"
+          [disabled]="!validations_form.valid"
+          >Solicitar</ion-button
+        >        
+      </div>
+
+  </form>
     
-  </ion-button>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button [routerLink]="'/home'">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Inicio</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button [routerLink]="'/profile-client'">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button [routerLink]="'/comments'">
+        <ion-icon name="list"></ion-icon>
+        <ion-label>Comentarios</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-toolbar>
+</ion-footer>
