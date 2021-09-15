@@ -24,7 +24,7 @@ export class AuthService {
   URL:string="http://127.0.0.1:8000/api";
 
   constructor(
-    private http: HttpClient,
+    public http: HttpClient,
         ) { 
       this.headers.append("Authorization", "Bearer"+ localStorage.getItem("token"));
     }
