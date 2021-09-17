@@ -7,7 +7,7 @@ import {
 } from '@angular/forms';
 import { NavController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
-import { Storage } from '@ionic/storage';
+//import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-login',
@@ -24,7 +24,7 @@ export class LoginPage implements OnInit {
     private navCtrl: NavController,
     private formBuilder: FormBuilder,
     public authSvc: AuthService,
-    public storage: Storage 
+    //public storage: Storage 
   ) { }
 
   ngOnInit() {
@@ -64,9 +64,8 @@ export class LoginPage implements OnInit {
   loginUser(){
     this.authSvc.signin(this.validations_form.value).subscribe(
       result=>{
-        this.storage.create();
-        this.storage.set('auth_token', result.token)
-        console.log(this.storage);
+        localStorage.setItem('auth_token', result.token)
+        console.log(localStorage);
       },
       error => {
         this.errors = error.error;

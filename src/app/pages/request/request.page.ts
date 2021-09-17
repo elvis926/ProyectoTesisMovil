@@ -6,7 +6,8 @@ import {
   FormControl,
 } from '@angular/forms';
 import { NavController } from '@ionic/angular';
-import { GestionuserService } from 'src/app/services/gestion-users.service';
+import { GestionuserService } from 'src/app/services/gestionuser.service';
+
 
 @Component({
   selector: 'app-request',
