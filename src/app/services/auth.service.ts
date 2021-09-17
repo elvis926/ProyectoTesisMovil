@@ -16,15 +16,18 @@ export class User {
   role!: Role;
 }
 
+
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class AuthService {
   headers = new HttpHeaders();
   URL:string="http://127.0.0.1:8000/api";
 
   constructor(
-    public http: HttpClient,
+    private http: HttpClient,
         ) { 
       this.headers.append("Authorization", "Bearer"+ localStorage.getItem("token"));
     }
@@ -43,4 +46,10 @@ export class AuthService {
   userAuth(): Observable<any> {
     return this.http.get(`${this.URL}/user`, {headers: this.headers});
   }
+
+  logout(): Observable<any>{
+    return this.http.post(`${this.URL}/logout`,{header: this.headers});
+  }
+
 }
+
