@@ -1,0 +1,22 @@
+ion-header{
+    ion-title{
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        color:var(--ion-color-mycolor);
+    }
+    ion-icon{
+        color:var(--ion-color-mycolor)
+    }
+    }
+    ion-content{
+        font-family: 'Courier New', Courier, monospace;
+        ion-card{
+            
+        ion-button{
+            background-color: var(--ion-color-mycolor);
+        }
+        ion-icon{
+            color:var(--ion-color-mycolor)
+        }
+    }
+    }

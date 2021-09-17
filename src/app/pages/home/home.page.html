@@ -1,27 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>TecniFast</ion-title>
-    
   </ion-toolbar>
 </ion-header>
 
-<ion-menu side="start" menuId="first" contentId="main">
-  <ion-header>
-    <ion-toolbar color="primary">
-      <ion-title>Start Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-    <ion-list>
-      <ion-item [routerLink]="'/request'">Solicitar Servicio</ion-item>
-      <ion-item [routerLink]="'/solutions'">Daños Comunes</ion-item>
-      <ion-item [routerLink]="'/work'">Trabaja Con Nosotros</ion-item>
-      <ion-item [routerLink]="'/comments'">Mis Comentarios</ion-item>
-      <ion-item [routerLink]="'/contact'">Contactanos</ion-item>
-    </ion-list>
-  </ion-content>
-</ion-menu>
-<ion-router-outlet id="main"></ion-router-outlet>
 
 <ion-content>
   <ion-fab horizontal="end" vertical="top" slot="fixed" edge>

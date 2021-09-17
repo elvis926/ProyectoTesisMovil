@@ -64,16 +64,14 @@ export class LoginPage implements OnInit {
   loginUser(){
     this.authSvc.signin(this.validations_form.value).subscribe(
       result=>{
+        console.log(result);
+        if(result.status=='Ok'){
         this.storage.create();
         this.storage.set('auth_token', result.token)
-        console.log(this.storage);
-      },
-      error => {
-        this.errors = error.error;
-      },
-      ()=>{
         this.navCtrl.navigateForward('/home');
-      }
+      }else if(result.status =="error"){
+        console.log('Control de usuario');
+      }},
     )
     
   }

@@ -52,9 +52,22 @@ const routes: Routes = [
   {
     path: 'contact',
     loadChildren: () => import('./pages/contact/contact.module').then( m => m.ContactPageModule)
-  },  {
+  },
+  {
     path: 'slider',
     loadChildren: () => import('./slider/slider.module').then( m => m.SliderPageModule)
+  },
+  {
+    path: 'applications',
+    loadChildren: () => import('./pages/applications/applications.module').then( m => m.ApplicationsPageModule)
+  },
+  {
+    path: 'allapplications',
+    loadChildren: () => import('./pages/allapplications/allapplications.module').then( m => m.AllapplicationsPageModule)
+  },
+  {
+    path: 'myapplications',
+    loadChildren: () => import('./pages/myapplications/myapplications.module').then( m => m.MyapplicationsPageModule)
   },
 
 ];
