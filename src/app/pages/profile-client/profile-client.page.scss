@@ -1,11 +1,26 @@
-ion-avatar{
-    display:block !important;
-    margin:auto !important;
-}
-.button-edit{
-    width: 30% !important;
-    background-color: var(--ion-color-mycolor) !important;
-}
+ion-header{
+    ion-toolbar{
+    --background: var(--ion-color-mycolora) !important;
+      height: 220px;
+      ion-button{
+          background-color:var(--ion-color-mycolor) ;
+          width: 40px;
+      }
+    }
+    h1{
+      color:var(--ion-color-mycolor);
+      //margin-top: 80px;
+      text-align: center !important;
+    }
+    ion-avatar{
+        display:block !important;
+        margin:auto !important;
+    ion-icon{
+        color:var(--ion-color-mycolor) ;
+    }
+    }
+  }
+
 ion-icon{
     display:block !important;
     margin:auto !important;

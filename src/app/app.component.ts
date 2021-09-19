@@ -13,7 +13,7 @@ export class AppComponent {
     { title: 'Perfil técnico', url: '/profile-tecnic', icon: 'hammer' },
     { title: 'Ingresar', url: '/login', icon: 'person' },
     { title: 'Soluciones', url: '/solutions', icon: 'person' },
-    { title: 'Requerimientos', url: '/usercomment', icon: 'person' },
+    { title: 'Requerimientos', url: '/request', icon: 'person' },
     { title: 'Trabaja con nosotros', url: '/work', icon: 'person' },
     { title: 'Slider', url: '/slider', icon: 'briefcase' },
     { title: 'Comentarios', url: '/comments', icon: 'briefcase' },

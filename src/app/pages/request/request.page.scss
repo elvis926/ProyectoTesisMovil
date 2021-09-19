@@ -1,0 +1,13 @@
+ion-header{
+    ion-title{
+        text-align: center;
+        color: var(--ion-color-mycolor);
+
+    }
+}
+ion-content{
+    ion-button{
+        background-color: var(--ion-color-mycolor);
+        width: 85%;
+    }
+}
