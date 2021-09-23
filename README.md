@@ -1,4 +1,6 @@
 # TecniFast
+![Logo](https://user-images.githubusercontent.com/67065421/134592308-25111f41-f15b-4c1c-b873-08c35f267e16.jpeg)
+
 El proyecto esta elaborado con [Ionic](https://ionicframework.com/),[Angular](https://angular.io/errors/NG0201) y [Laravel](https://laravel.com/).
 ## 📄 Información General
 La Aplicación Móvil permite realizar requerimientos de un usuario (cliente) para el mantenimiento de sus equipos computacionales, un usuario técnico se postula al requerimiento del clienta para asi llegar a un acuerdo y realizar las reparaciones pertinentes de los equipos.
@@ -20,4 +22,32 @@ La Aplicación Móvil permite realizar requerimientos de un usuario (cliente) pa
 
 ![Captura](https://user-images.githubusercontent.com/67065421/134586888-7ac94997-50c3-4ef3-9629-d0426b9c788a.PNG)
 
-## 👨‍💻 Capturas
+## 👨‍💻 Tecnologías
+* Ionic 6.0.1
+* Capacitor 3.0.0
+* Angular 
+
+## ⚙️ Configuración
+* Clonar el repositorio
+* npm i or npm install
+
+## Características
+### ¿Qué hacer?
+#### Todos los usuarios
+* Crear una cuenta
+* Editar perfil
+* Pstularse para ser parte de l plataforma con un perfil de técnico
+* Ver los comentarios
+* Recuperar clave
+* Cambiar clave
+* Navegar en la Aplicación
+#### Clientes
+* Pedir un requerimiento
+* Aceptar el técnico para su requerimiento
+* Dar calificacio al técnico
+#### Técnicos
+* Potularse para ser parte de l plataforma con un perfil de técnico
+* Postularse para posibles requerimientos
+
+## Estado
+La Aplicación esta en desarrollo
