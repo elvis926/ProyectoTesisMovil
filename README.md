@@ -1,6 +1,8 @@
 # TecniFast
 El proyecto esta elaborado con [Ionic](https://ionicframework.com/),[Angular](https://angular.io/errors/NG0201) y [Laravel](https://laravel.com/).
-## Despliegue 📦
+## 📄 Información General
+La Aplicación Móvil permite realizar requerimientos de un usuario (cliente) para el mantenimiento de sus equipos computacionales, un usuario técnico se postula al requerimiento del clienta para asi llegar a un acuerdo y realizar las reparaciones pertinentes de los equipos.
+## 📷 Capturas
 
 * Lista de requerimientos
 
@@ -17,3 +19,5 @@ El proyecto esta elaborado con [Ionic](https://ionicframework.com/),[Angular](ht
 * Comentarios
 
 ![Captura](https://user-images.githubusercontent.com/67065421/134586888-7ac94997-50c3-4ef3-9629-d0426b9c788a.PNG)
+
+## 👨‍💻 Capturas
