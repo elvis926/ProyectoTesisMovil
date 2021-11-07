@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  rol = new String;
+
   public appPages = [
     { title: 'Inicio', url: '/home', icon: 'home' },
     { title: 'Contáctanos', url: '/contact', icon: 'person' },
@@ -21,5 +24,17 @@ export class AppComponent {
   ];
 
 
-  constructor() {}
+  constructor(
+    private authUser:AuthService,
+    ) {}
+  onInit(){
+    this.authUser.userAuth().subscribe(
+      result=>{
+        console.log(result);
+        this.rol=result.role;
+        console.log(this.rol);
+      }
+    )
+
+  }
 }
