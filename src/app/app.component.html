@@ -9,10 +9,6 @@
       </ion-label>
      </div>
     <div class="action-button">
-      <ion-button>
-        <ion-icon slot="start" name="add"></ion-icon>
-        Opción uno
-      </ion-button>
     </div>
     
     <ion-list class="menu-items" lines="none">
@@ -20,42 +16,52 @@
       <ion-menu-toggle auto-hide="true">
         
       <ion-item class="active">
-        <ion-icon name="apps-outline"  slot="start" routerLink="home"></ion-icon>
+        <ion-icon name="menu" slot="start" routerLink="home"></ion-icon>
         <ion-label>Inicio</ion-label>
       </ion-item>
       </ion-menu-toggle>
 
       <ion-menu-toggle auto-hide="true">
       <ion-item>
-        <ion-icon name="pie-chart-outloine" routerLink="solutions"></ion-icon>
+        <ion-icon name="hammer" routerLink="solutions"></ion-icon>
         <ion-label>Soluciones</ion-label>
       </ion-item>
       </ion-menu-toggle>
 
       <ion-menu-toggle>
       <ion-item>
-        <ion-icon name="pie-chart-outloine"></ion-icon>Prueba3
+        <ion-icon name="send" routerLink="comments"></ion-icon>
         <ion-label>Comentarios</ion-label>
+      </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+      <ion-item>
+        <ion-icon name="person" routerLink="profile-client"></ion-icon>
+        <ion-label>Perfil</ion-label>
       </ion-item>
       </ion-menu-toggle>
 
       <ion-menu-toggle>
       <ion-item>
-        <ion-icon name="pie-chart-outloine"></ion-icon>Prueba4
-      </ion-item>}
-      </ion-menu-toggle>
-
-      <ion-menu-toggle>
-      <ion-item>
-        <ion-icon name="pie-chart-outloine"></ion-icon>Prueba5
+        <ion-icon name="briefcase" routerLink="work"></ion-icon>
+        <ion-label>Trabaja con nosotros</ion-label>
       </ion-item>
     </ion-menu-toggle>
 
       <ion-menu-toggle>
       <ion-item>
-        <ion-icon name="pie-chart-outloine"></ion-icon>Prueba6
+        <ion-icon name="add" routerLink="request"></ion-icon>
+        <ion-label>Requerimiento</ion-label>
       </ion-item>
+      
       </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item>
+          <ion-icon name="call" routerLink="contact"></ion-icon>
+          <ion-label>Contáctanos</ion-label>
+        </ion-item>
+        
+        </ion-menu-toggle>
     </ion-list>
    </ion-content>
  </ion-menu>
